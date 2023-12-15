@@ -23,3 +23,7 @@
   justify-content: center;
   /* background-color: grey; */
 }
+.login-bg {
+  background-image: url("../public/assets/images/bg1.jpeg");
+  background-size: cover;
+}

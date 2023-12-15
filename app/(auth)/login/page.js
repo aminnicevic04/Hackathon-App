@@ -10,7 +10,7 @@ const LoginPage = async () => {
 
   return (
     <section className="flex h-screen overflow-x-hidden">
-      <div className="basis-1/2 bg-blue-400 grow"></div>
+      <div className="basis-1/2 bg-blue-400 grow login-bg"></div>
       <div className="basis-[40em] flex justify-center items-center p-16">
         <LoginForm />
       </div>
