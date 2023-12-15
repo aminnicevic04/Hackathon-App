@@ -81,7 +81,7 @@ const Input = ({
         placeholder={placeholder}
         type={type}
         defaultValue={value}
-        className={`p-3 rounded-md bg-[#2b2b2b] text-white  ${
+        className={`p-2 bg-[#2b2b2b] text-white border border-solid border-gray-500 rounded-md  ${
           !state.isValid && state.isTouched && "border border-red-600"
         }`}
         onChange={changeHandler}

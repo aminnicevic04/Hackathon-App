@@ -7,6 +7,7 @@ import useForm from "../../../lib/hooks/useForm";
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from "../../../lib/validation";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "next/link";
 
 const SignupForm = () => {
   const { formState, inputChangeHandler } = useForm(
@@ -57,18 +58,19 @@ const SignupForm = () => {
   }
 
   return (
-    <div className="flex flex-col w-full gap-8">
+    <div className="flex flex-col gap-8">
       <ToastContainer />
       <div>
         <div>
-          <h2 className="section_title_smaller text-white">Signup</h2>
+          <h2 className="section_title_smaller text-white text-center">
+            Register
+          </h2>
         </div>
         <div>
           <p></p>
         </div>
       </div>
-      <form className="flex flex-col gap-8 w-full" onSubmit={signupAction}>
-        {/* <ToastContainer /> */}
+      <form className="flex flex-col gap-8 w-80 " onSubmit={signupAction}>
         <div className="flex flex-col gap-6">
           <Input
             elementType={"input"}
@@ -101,7 +103,7 @@ const SignupForm = () => {
             validators={[VALIDATOR_MINLENGTH(3)]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid username."
+            helperText="Please enter a valid username"
           />
           <Input
             elementType={"input"}
@@ -117,10 +119,16 @@ const SignupForm = () => {
         </div>
         <div>
           <Button variant="primary" type="submit" disabled={!formState.isValid}>
-            Continue
+            Sign Up
           </Button>
         </div>
       </form>
+      <div className="flex gap-2 justify-center">
+        <p className="text-gray-400 text-center">Already have an account?</p>
+        <Link href="/login" className="text-white">
+          Sign in
+        </Link>
+      </div>
     </div>
   );
 };

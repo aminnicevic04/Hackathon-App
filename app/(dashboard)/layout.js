@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Poppins } from "next/font/google";
+=======
+import { Inter } from "next/font/google";
+>>>>>>> b140afa0dd7f9ef7c1be339ce5f9cb0ec1b604c3
 import "../globalsSignup.css";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../../components/shared/navigation/Sidebar";

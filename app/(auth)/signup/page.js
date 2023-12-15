@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 import { authOptions } from "../../../lib/session";
 import SignupForm from "../../../components/auth/signup/SignupForm";
 
@@ -9,9 +9,9 @@ const SignupPage = async () => {
   // if (session) redirect("/");
 
   return (
-    <section className="flex h-screen overflow-x-hidden">
+    <section className="lg:flex h-screen overflow-x-hidden">
       <div className="basis-1/2 bg-blue-400 grow"></div>
-      <div className="basis-[40em] flex justify-center items-center p-16">
+      <div className="basis-[40em] flex justify-center p-4">
         <SignupForm />
       </div>
     </section>
