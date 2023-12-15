@@ -6,7 +6,7 @@ import SignupForm from "../../../components/auth/signup/SignupForm";
 const SignupPage = async () => {
   const session = await getServerSession(authOptions);
 
-  if (session) redirect("/");
+  // if (session) redirect("/");
 
   return (
     <section className="flex h-screen overflow-x-hidden">

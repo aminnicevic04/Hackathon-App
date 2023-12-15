@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 body {
-  background-color: #333;
+  background: rgb(6, 32, 151);
+  background: radial-gradient(
+    circle,
+    rgba(6, 32, 151, 1) 0%,
+    rgba(28, 20, 86, 1) 35%,
+    rgba(17, 14, 38, 1) 78%
+  );
 }
 
 .section_title {
