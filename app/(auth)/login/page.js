@@ -6,7 +6,7 @@ import LoginForm from "../../../components/auth/login/LoginForm";
 const LoginPage = async () => {
   const session = await getServerSession(authOptions);
   console.log(session);
-  if (session) redirect("/");
+  // if (session) redirect("/");
 
   return (
     <section className="flex h-screen overflow-x-hidden">
