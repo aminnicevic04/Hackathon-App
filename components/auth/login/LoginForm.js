@@ -1,9 +1,9 @@
 "use client";
 
-import Button from "@/components/shared/form/Button";
-import Input from "@/components/shared/form/Input";
-import useForm from "@/lib/hooks/useForm";
-import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from "@/lib/validation";
+import Button from "../../../components/shared/form/Button";
+import Input from "../../../components/shared/form/Input";
+import useForm from "../../../lib/hooks/useForm";
+import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from "../../../lib/validation";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";

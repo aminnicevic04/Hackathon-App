@@ -1,6 +1,6 @@
 "use client";
 
-import { validate } from "@/lib/validation";
+import { validate } from "../../../lib/validation";
 import { useCallback, useEffect, useReducer } from "react";
 
 const reducer = (state, action) => {

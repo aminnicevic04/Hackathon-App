@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/session";
+import { authOptions } from "../../lib/session";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
