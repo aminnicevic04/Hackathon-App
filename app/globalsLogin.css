@@ -1,0 +1,25 @@
+#wellcome-title {
+  margin: 0;
+  padding: 0;
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#wellcome-title h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+#wellcome-title h3 {
+  color: white;
+}
+.btn {
+  margin-top: 2rem;
+}
+#forma {
+  display: flex;
+  justify-content: center;
+  /* background-color: grey; */
+}
