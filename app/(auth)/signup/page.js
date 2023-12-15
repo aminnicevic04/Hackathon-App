@@ -10,7 +10,7 @@ const SignupPage = async () => {
 
   return (
     <section className="lg:flex h-screen overflow-x-hidden">
-      <div className="basis-1/2 bg-blue-400 grow"></div>
+      <div className="basis-1/2 bg-blue-400 grow login-bg"></div>
       <div className="basis-[40em] flex justify-center p-4">
         <SignupForm />
       </div>
