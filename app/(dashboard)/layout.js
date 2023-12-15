@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "../globals.css";
+import "../globalsSignup.css";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../../components/shared/navigation/Sidebar";
 
