@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #333;
+}
+
+.section_title {
+  @apply text-4xl font-bold;
+}
+
+.section_title_smaller {
+  @apply text-2xl font-medium;
+}
+
+.section_subtitle {
+  @apply uppercase text-xs font-bold;
+}
