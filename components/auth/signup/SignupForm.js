@@ -65,7 +65,7 @@ const SignupForm = () => {
           <h2
             className={`section_title_smaller text-white text-center p-4 max-md:p-0`}
           >
-            Register
+            Registracija
           </h2>
         </div>
         <div>
@@ -78,58 +78,58 @@ const SignupForm = () => {
             elementType={"input"}
             id={"email"}
             type={"email"}
-            label="Email"
-            placeholder={"Enter Email"}
+            label="E-mail"
+            placeholder={"Unesite E-mail"}
             validators={[VALIDATOR_EMAIL()]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid email address."
+            helperText="Molimo vas unesite validnu e-mail adresu."
           />
           <Input
             elementType={"input"}
             id={"name"}
             type={"text"}
-            label="Name"
-            placeholder={"Enter Name"}
+            label="Ime"
+            placeholder={"Unesite ime"}
             validators={[VALIDATOR_MINLENGTH(3)]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid name."
+            helperText="Molimo vas unesite validno ime."
           />
           <Input
             elementType={"input"}
             id={"username"}
             type={"text"}
-            label="Username"
-            placeholder={"Enter Username"}
+            label="Korisničko ime"
+            placeholder={"Unesite korisničko ime"}
             validators={[VALIDATOR_MINLENGTH(3)]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid username"
+            helperText="Molimo vas unesite validno korisničko ime."
           />
           <Input
             elementType={"input"}
             id={"password"}
             type={"password"}
-            label="Password"
-            placeholder={"Enter Password"}
+            label="Lozinka"
+            placeholder={"Unesite lozinku"}
             validators={[VALIDATOR_MINLENGTH(8)]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid password."
+            helperText="Molimo vas unesite validnu lozinku."
           />
         </div>
         <div>
           <Button variant="primary" type="submit" disabled={!formState.isValid}>
-            Sign Up
+            Registruj se
           </Button>
         </div>
       </form>
       <div className="flex flex-col gap-6 p-6">
         <div className="flex gap-2 justify-center">
-          <p className="text-gray-400 text-center">Already have an account?</p>
+          <p className="text-gray-400 text-center">Već imate nalog?</p>
           <Link href="/login" className="text-white">
-            Sign in
+            Ulogujte se
           </Link>
         </div>
         <p className="text-gray-400 text-center">
