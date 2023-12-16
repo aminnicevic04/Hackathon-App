@@ -1,9 +1,11 @@
 "use client";
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
 
 const HoursConsumption = ({ data }) => {
-  const areaChart = data[3];
+  if (!data) {
+    // Handle the case where the chart data is not found
+    return null;
+  }
 
   // Custom colors
   const colors = [
@@ -16,7 +18,7 @@ const HoursConsumption = ({ data }) => {
   ];
 
   // Custom labels with styles
-  const labelsWithStyles = areaChart.data.map((value, index) => ({
+  const labelsWithStyles = data.data.map((value, index) => ({
     label: `${value}%`,
     style: {
       color: colors[index % colors.length], // Use a cycling pattern for colors
@@ -27,7 +29,7 @@ const HoursConsumption = ({ data }) => {
   return (
     <div className="h-64 card_charts w-full flex max-xl:justify-between max-md:flex-col max-md:h-fit">
       <div>
-        <h2 className="text-lg text-white">{areaChart.label}</h2>
+        <h2 className="text-lg text-white">{data.label}</h2>
         <div className="my-6 grid grid-cols-3 gap-3">
           {labelsWithStyles.map((item, index) => (
             <div key={index} style={item.style}>
@@ -41,7 +43,7 @@ const HoursConsumption = ({ data }) => {
           data={{
             datasets: [
               {
-                data: areaChart.data,
+                data: data.data,
                 backgroundColor: colors,
               },
             ],

@@ -3,16 +3,13 @@ import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
 const AvgLastMonthConsumption = ({ data }) => {
-  const pieChart = data[2];
-
   const colors = ["#36a2eb", "#ff6384"];
 
-  // Custom labels with styles
-  const labelsWithStyles = Object.entries(pieChart.data).map(
+  const labelsWithStyles = Object.entries(data.data).map(
     ([label, value], index) => ({
       label: `${label}: ${value}%`,
       style: {
-        color: colors[index % colors.length], // Use a cycling pattern for colors
+        color: colors[index % colors.length],
         fontWeight: "bold",
       },
     })
@@ -20,7 +17,7 @@ const AvgLastMonthConsumption = ({ data }) => {
 
   return (
     <div className="h-64 card_charts w-full flex flex-col max-xl:justify-between max-md:flex-col max-md:h-fit">
-      <h2 className="text-lg text-white">{pieChart.label}</h2>
+      <h2 className="text-lg text-white">{data.label}</h2>
       <div className="flex gap-3">
         <div className="my-6">
           {labelsWithStyles.map((item, index) => (
@@ -34,7 +31,8 @@ const AvgLastMonthConsumption = ({ data }) => {
             data={{
               datasets: [
                 {
-                  data: Object.values(pieChart.data),
+                  data: Object.values(data.data),
+                  backgroundColor: colors,
                 },
               ],
             }}

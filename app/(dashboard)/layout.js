@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "../globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../../components/shared/navigation/Sidebar";
+import AuthProvider from "../../context/AuthProvider";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -13,14 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} overflow-hidden`}>
-        <main className="flex">
-          <Sidebar />
-          <div className="grow basis-full overflow-y-scroll overflow-x-hidden h-screen">
-            {children}
-          </div>
-        </main>
-      </body>
+      <AuthProvider>
+        <body className={`${poppins.className} overflow-hidden`}>
+          <main className="flex">
+            <Sidebar />
+            <div className="grow basis-full overflow-y-scroll overflow-x-hidden h-screen">
+              {children}
+            </div>
+          </main>
+        </body>
+      </AuthProvider>
     </html>
   );
 }

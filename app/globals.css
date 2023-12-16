@@ -46,6 +46,20 @@ body {
   @apply hidden;
 }
 
+.card {
+  background: url("../public/assets/images/cardbg.png") right 70% / contain
+      no-repeat,
+    linear-gradient(
+      to top right,
+      rgba(6, 32, 151, 1) 0%,
+      rgba(28, 20, 86, 1) 35%,
+      rgba(17, 14, 38, 1) 78%
+    );
+  background-position: right 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .card_charts {
   padding: 30px;
   border-radius: 30px;
@@ -92,4 +106,19 @@ body {
 .login-bg {
   background-image: url("../public/assets/images/bg1.jpeg");
   background-size: cover;
+}
+
+.animate_fadeIn {
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
 }
