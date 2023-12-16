@@ -28,7 +28,7 @@ const HoursConsumption = ({ data }) => {
     <div className="h-64 card_charts w-full flex max-xl:justify-between max-md:flex-col max-md:h-fit">
       <div>
         <h2 className="text-lg text-white">{areaChart.label}</h2>
-        <div className="my-6 grid grid-cols-3">
+        <div className="my-6 grid grid-cols-3 gap-3">
           {labelsWithStyles.map((item, index) => (
             <div key={index} style={item.style}>
               {item.label}
@@ -36,16 +36,18 @@ const HoursConsumption = ({ data }) => {
           ))}
         </div>
       </div>
-      <Doughnut
-        data={{
-          datasets: [
-            {
-              data: areaChart.data,
-              backgroundColor: colors,
-            },
-          ],
-        }}
-      />
+      <div className="h-40">
+        <Doughnut
+          data={{
+            datasets: [
+              {
+                data: areaChart.data,
+                backgroundColor: colors,
+              },
+            ],
+          }}
+        />
+      </div>
     </div>
   );
 };
