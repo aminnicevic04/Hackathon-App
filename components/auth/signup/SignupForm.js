@@ -58,11 +58,13 @@ const SignupForm = () => {
   }
 
   return (
-    <div className="flex flex-col p-8">
+    <div className="flex flex-col">
       <ToastContainer />
       <div>
         <div>
-          <h2 className="section_title_smaller text-white text-center">
+          <h2
+            className={`section_title_smaller text-white text-center p-4 max-md:p-0`}
+          >
             Register
           </h2>
         </div>
@@ -70,7 +72,7 @@ const SignupForm = () => {
           <p></p>
         </div>
       </div>
-      <form className="flex flex-col gap-8 w-80 " onSubmit={signupAction}>
+      <form className="flex flex-col gap-8" onSubmit={signupAction}>
         <div className="flex flex-col gap-6">
           <Input
             elementType={"input"}
@@ -123,11 +125,16 @@ const SignupForm = () => {
           </Button>
         </div>
       </form>
-      <div className="flex gap-2 justify-center">
-        <p className="text-gray-400 text-center">Already have an account?</p>
-        <Link href="/login" className="text-white">
-          Sign in
-        </Link>
+      <div className="flex flex-col gap-6 p-6">
+        <div className="flex gap-2 justify-center">
+          <p className="text-gray-400 text-center">Already have an account?</p>
+          <Link href="/login" className="text-white">
+            Sign in
+          </Link>
+        </div>
+        <p className="text-gray-400 text-center">
+          Made by team UTUN on Hackathon 2023 👨🏽‍💻
+        </p>
       </div>
     </div>
   );
