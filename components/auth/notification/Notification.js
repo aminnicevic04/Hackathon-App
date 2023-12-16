@@ -4,6 +4,9 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 
 export default function BasicAlerts() {
+  const datum = new Date();
+  const datum2 = datum.toDateString().slice(4);
+  console.log(datum2);
   return (
     <div>
       <Stack sx={{ width: "100%" }} spacing={4}>
@@ -13,6 +16,7 @@ export default function BasicAlerts() {
         <Alert severity="warning">
           Sve ste bliži crvenoj zoni potrošnje električne energije!
         </Alert>
+        <Alert severity="info">{datum2} | Do sada ste potrosili 290 kWh.</Alert>
         <Alert severity="success">
           Nalazite se u zelenoj zoni potrošnje električne energije.
         </Alert>
