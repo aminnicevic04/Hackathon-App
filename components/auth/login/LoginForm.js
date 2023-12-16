@@ -7,6 +7,7 @@ import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from "../../../lib/validation";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "next/link";
 
 const LoginForm = () => {
   const { formState, inputChangeHandler } = useForm(
@@ -94,6 +95,15 @@ const LoginForm = () => {
             Log In
           </Button>
         </div>
+        <div className="flex gap-2 justify-center">
+          <p className="text-gray-400 text-center">Don't have an account?</p>
+          <Link href="/signup" className="text-white">
+            Sign in
+          </Link>
+        </div>
+        <p className="text-gray-400 text-center">
+          Made by team UTUN on Hackathon 2023 👨🏽‍💻
+        </p>
       </form>
     </>
   );
