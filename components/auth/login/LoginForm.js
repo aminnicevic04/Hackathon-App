@@ -57,8 +57,8 @@ const LoginForm = () => {
         onSubmit={loginAction}
       >
         <div className="flex flex-col items-center" id="wellcome-title">
-          <h1>Nice to see you!</h1>
-          <h3>Enter your email and password to sign in</h3>
+          <h1>Drago mi je da te vidim!</h1>
+          <h3>Unesite svoj e-mail i lozinku za prijavu.</h3>
         </div>
         <ToastContainer />
         <div className="flex flex-col gap-6">
@@ -66,23 +66,23 @@ const LoginForm = () => {
             elementType={"input"}
             id={"email"}
             type={"email"}
-            label="Email"
-            placeholder={"Enter Email"}
+            label="E-mail"
+            placeholder={"Unesite E-mail"}
             validators={[VALIDATOR_EMAIL()]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid email address."
+            helperText="Molimo Vas da unesete validnu email adresu."
           />
           <Input
             elementType={"input"}
             id={"password"}
             type={"password"}
-            label="Password"
-            placeholder={"Enter Password"}
+            label="Lozinka"
+            placeholder={"Unesite lozinku"}
             validators={[VALIDATOR_MINLENGTH(8)]}
             onInputChange={inputChangeHandler}
             initialValidity={false}
-            helperText="Please enter a valid password."
+            helperText="Unesite važeću lozinku."
           />
         </div>
         <div>
@@ -92,17 +92,17 @@ const LoginForm = () => {
             disabled={!formState.isValid}
             className="btn"
           >
-            Log In
+            Ulogujte se
           </Button>
         </div>
         <div className="flex gap-2 justify-center">
-          <p className="text-gray-400 text-center">Don't have an account?</p>
+          <p className="text-gray-400 text-center">Nemate profil?</p>
           <Link href="/signup" className="text-white">
-            Sign in
+            Prijavite se
           </Link>
         </div>
         <p className="text-gray-400 text-center">
-          Made by team UTUN on Hackathon 2023 👨🏽‍💻
+          Napravio tim UTUN na Hackathonu 2023👨🏽‍💻
         </p>
       </form>
     </>
