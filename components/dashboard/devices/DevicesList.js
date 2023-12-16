@@ -2,9 +2,13 @@
 import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { Delete } from "@mui/icons-material";
+import { deleteDevices } from "../../../lib/actions/user.actions";
+import { getUserAuthId } from "../../../lib/functions";
 
 const DevicesList = ({ devices }) => {
   const [deviceStates, setDeviceStates] = useState(devices.map(() => false));
+  const userIdAuth = getUserAuthId();
 
   const handleToggle = (index) => {
     setDeviceStates((prevStates) => {
@@ -54,6 +58,21 @@ const DevicesList = ({ devices }) => {
                   </span>
                 }
               />
+            </td>
+            <td>
+              <button
+                onClick={async () => {
+                  const confirm = window.confirm(
+                    "Da li ste sigurni da zelite da izbrisete uredjaj?"
+                  );
+
+                  if (confirm) {
+                    await deleteDevices(userIdAuth, device._id);
+                  }
+                }}
+              >
+                <Delete style={{ color: "red" }} />
+              </button>
             </td>
           </tr>
         ))}

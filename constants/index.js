@@ -6,25 +6,25 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 export const SidebarData = [
   {
     id: "s1",
-    title: "Dashboard",
+    title: "Pocetna",
     icon: <DashboardIcon style={{ color: "#fff", fontSize: "19px" }} />,
     href: "/",
   },
   {
     id: "s2",
-    title: "Profile",
+    title: "Notifikacije",
     icon: <PersonIcon style={{ color: "#fff", fontSize: "19px" }} />,
-    href: "/profile",
+    href: "/notification",
   },
   {
     id: "s3",
-    title: "Sign In",
+    title: "Prijavi Se",
     icon: <LockOpenIcon style={{ color: "#fff", fontSize: "19px" }} />,
     href: "/login",
   },
   {
     id: "s4",
-    title: "Sign Up",
+    title: "Registruj Se",
     icon: <AddBoxIcon style={{ color: "#fff", fontSize: "19px" }} />,
     href: "/signup",
   },
