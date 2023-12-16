@@ -1,6 +1,6 @@
 {
   "ime_korisnika": "Ime Prezime",
-  "broj_racuna": "123-456-789",
+  "broj_racuna": "77-425-93",
   "datum_izdavanja": "2023-12-16",
   "meseci": [
     {
@@ -46,7 +46,7 @@
       "ukupan_iznos": 26.1
     }
   ],
-  "ukupno_za_period": {
+  "ukupno": {
     "iznos_bez_pdv": 143.5,
     "pdv_stopa": 20,
     "ukupan_iznos": 172.2
