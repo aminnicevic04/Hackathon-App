@@ -1,0 +1,54 @@
+{
+  "ime_korisnika": "Ime Prezime",
+  "broj_racuna": "123-456-789",
+  "datum_izdavanja": "2023-12-16",
+  "meseci": [
+    {
+      "mesec": "Jun 2023",
+      "potrosnja_kWh": 150,
+      "iznos_bez_pdv": 22.5,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 27.0
+    },
+    {
+      "mesec": "Jul 2023",
+      "potrosnja_kWh": 155,
+      "iznos_bez_pdv": 23.25,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 27.9
+    },
+    {
+      "mesec": "Avgust 2023",
+      "potrosnja_kWh": 160,
+      "iznos_bez_pdv": 24.0,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 28.8
+    },
+    {
+      "mesec": "Septembar 2023",
+      "potrosnja_kWh": 155,
+      "iznos_bez_pdv": 23.25,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 27.9
+    },
+    {
+      "mesec": "Oktobar 2023",
+      "potrosnja_kWh": 150,
+      "iznos_bez_pdv": 22.5,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 27.0
+    },
+    {
+      "mesec": "Novembar 2023",
+      "potrosnja_kWh": 145,
+      "iznos_bez_pdv": 21.75,
+      "pdv_stopa": 20,
+      "ukupan_iznos": 26.1
+    }
+  ],
+  "ukupno_za_period": {
+    "iznos_bez_pdv": 143.5,
+    "pdv_stopa": 20,
+    "ukupan_iznos": 172.2
+  }
+}
