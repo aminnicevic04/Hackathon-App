@@ -96,9 +96,9 @@ const LoginForm = () => {
           </Button>
         </div>
         <div className="flex gap-2 justify-center">
-          <p className="text-gray-400 text-center">Nemate profil?</p>
+          <p className="text-gray-400 text-center">Nemate nalog?</p>
           <Link href="/signup" className="text-white">
-            Prijavite se
+            Registrujte se
           </Link>
         </div>
         <p className="text-gray-400 text-center">
