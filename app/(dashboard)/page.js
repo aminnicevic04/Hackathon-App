@@ -20,8 +20,8 @@ export default async function Home() {
       <div>
         <TopBar />
       </div>
-      <div className="flex gap-3">
-        <div className="basis-1/2 flex flex-col gap-3 rounded-xl p-6 h-64 card_charts">
+      <div className="flex gap-3 max-2xl:flex-col">
+        <div className="basis-1/2 flex flex-col gap-3 rounded-xl p-6 h-64 card_charts max-2xl:basis-full">
           <div>
             <h2 className="text-gray-400">Welcome back,</h2>
           </div>
@@ -32,14 +32,16 @@ export default async function Home() {
             <h2 className="text-gray-400">Glad to see you again!</h2>
           </div>
         </div>
-        <div className="basis-1/2 grow">
-          <AvgLastMonthConsumption data={data[0].charts} />
-        </div>
-        <div className="basis-1/2">
-          <HoursConsumption data={data[0].charts} />
+        <div className="flex gap-3 max-xl:flex-col">
+          <div className="basis-1/2 growmax-xl:basis-full">
+            <AvgLastMonthConsumption data={data[0].charts} />
+          </div>
+          <div className="basis-1/2 max-xl:basis-full">
+            <HoursConsumption data={data[0].charts} />
+          </div>
         </div>
       </div>
-      <div className="flex gap-3">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3">
         <div className="basis-1/2">
           <TotalsConsumption data={data[0].charts} />
         </div>

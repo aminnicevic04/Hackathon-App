@@ -19,7 +19,7 @@ const AvgLastMonthConsumption = ({ data }) => {
   );
 
   return (
-    <div className="h-64 card_charts w-full flex">
+    <div className="h-64 card_charts w-full flex max-xl:justify-between max-md:flex-col max-md:h-fit">
       <div>
         <h2 className="text-lg text-white">{pieChart.label}</h2>
         <div className="my-6">

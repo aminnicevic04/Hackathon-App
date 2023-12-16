@@ -1,6 +1,5 @@
 import { Poppins } from "next/font/google";
-import { Inter } from "next/font/google";
-import "../globalsSignup.css";
+import "../globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "../../components/shared/navigation/Sidebar";
 
@@ -17,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} overflow-hidden`}>
         <main className="flex">
           <Sidebar />
-          <div className="grow basis-full overflow-y-scroll h-screen">
+          <div className="grow basis-full overflow-y-scroll overflow-x-hidden h-screen">
             {children}
           </div>
         </main>

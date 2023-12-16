@@ -1,5 +1,4 @@
-import "../globalsLogin.css";
-import "../globalsSignup.css";
+import "../globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
