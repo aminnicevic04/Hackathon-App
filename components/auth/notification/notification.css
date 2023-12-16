@@ -1,0 +1,11 @@
+.notify {
+  width: 70%;
+  display: flex;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-top: 10vh;
+  color: #fff;
+  padding-bottom: 4vh;
+}
