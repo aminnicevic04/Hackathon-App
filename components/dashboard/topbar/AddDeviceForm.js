@@ -88,7 +88,7 @@ const AddDeviceForm = ({ closeDialog }) => {
         type={"text"}
         label="Naziv Uredjaja"
         placeholder={"Unesite naziv uredjaja"}
-        validators={[VALIDATOR_MINLENGTH(8)]}
+        validators={[VALIDATOR_MINLENGTH(3)]}
         onInputChange={inputChangeHandler}
         initialValidity={false}
         helperText="Molimo vas unesite validan naziv uredjaja."
@@ -99,7 +99,7 @@ const AddDeviceForm = ({ closeDialog }) => {
         type={"text"}
         label="Model Uredjaja"
         placeholder={"Unesite model uredjaja"}
-        validators={[VALIDATOR_MINLENGTH(8)]}
+        validators={[VALIDATOR_MINLENGTH(3)]}
         onInputChange={inputChangeHandler}
         initialValidity={false}
         helperText="Molimo vas unesite validan model uredjaja."

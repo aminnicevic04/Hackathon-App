@@ -1,12 +1,12 @@
 import { getServerSession } from "next-auth";
-// import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { authOptions } from "../../../lib/session";
 import SignupForm from "../../../components/auth/signup/SignupForm";
 
 const SignupPage = async () => {
   const session = await getServerSession(authOptions);
 
-  // if (session) redirect("/");
+  if (session) redirect("/");
 
   return (
     <section className="lg:flex h-screen overflow-x-hidden">
