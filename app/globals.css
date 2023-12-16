@@ -34,6 +34,18 @@ body {
   @apply uppercase text-xs font-bold;
 }
 
+.nav {
+  @apply basis-[21em] flex flex-col justify-between h-screen gap-9 p-9 bg-transparent;
+}
+
+.nav_open {
+  @apply absolute card_charts transition-all h-screen rounded-none;
+}
+
+.nav_exit {
+  @apply hidden;
+}
+
 .card_charts {
   padding: 30px;
   border-radius: 30px;

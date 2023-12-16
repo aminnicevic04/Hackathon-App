@@ -2,26 +2,47 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SidebarData } from "../../../constants/index";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Sidebar = () => {
-  const [isMenuOpen, setisMenuOpen] = useState(false);
+  const [isMenuOpen, setisMenuOpen] = useState(true);
+  const [sidebarClassName, setSidebarClassName] = useState("sidebar");
 
-  function handleToggle() {
+  function exitSidebar() {
+    setisMenuOpen(false);
+  }
+
+  function toggleSidebar() {
     setisMenuOpen((prevState) => !prevState);
   }
 
+  function handleResize() {
+    if (window.innerWidth > 1024) {
+      setSidebarClassName("nav");
+    } else {
+      isMenuOpen
+        ? setSidebarClassName("nav_open")
+        : setSidebarClassName("nav_exit");
+    }
+  }
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
-      {/* <button
-        onClick={handleToggle}
-        className="absolute text-white z-30 visible lg:hidden"
+      <button
+        onClick={toggleSidebar}
+        className="absolute z-30 visible lg:hidden"
       >
         Menu
-      </button> */}
-      <nav
-        className={`basis-[21em] flex flex-col justify-between h-screen gap-9 p-9 bg-transparent`}
-      >
+      </button>
+      <nav className={sidebarClassName}>
         <div>
           <div className="pb-3 border-b border-gray-700 text-center">
             <h2 className="text-xl text-white uppercase">Vision Electric UI</h2>

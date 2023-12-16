@@ -19,22 +19,40 @@ const AvgLastMonthConsumption = ({ data }) => {
   );
 
   return (
-    <div className="h-64 card_charts w-full flex max-xl:justify-between max-md:flex-col max-md:h-fit">
-      <div>
-        <h2 className="text-lg text-white">{pieChart.label}</h2>
+    <div className="h-64 card_charts w-full flex flex-col max-xl:justify-between max-md:flex-col max-md:h-fit">
+      <h2 className="text-lg text-white">{pieChart.label}</h2>
+      <div className="flex gap-3">
         <div className="my-6">
           {labelsWithStyles.map((item, index) => (
             <div key={index} style={item.style}>
               {item.label}
             </div>
           ))}
+        </div>{" "}
+        <div className="h-40">
+          <Pie
+            data={{
+              datasets: [
+                {
+                  data: Object.values(pieChart.data),
+                },
+              ],
+            }}
+            options={{
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    label: (context) => {
+                      const labelIndex = context.dataIndex;
+                      return labelsWithStyles[labelIndex].label;
+                    },
+                  },
+                },
+              },
+            }}
+          />
         </div>
       </div>
-      <Pie
-        data={{
-          datasets: [{ data: Object.values(pieChart.data) }],
-        }}
-      />
     </div>
   );
 };
