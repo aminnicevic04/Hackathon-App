@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/session";
 import { redirect } from "next/navigation";
+import { data } from "../../data/index";
 import TopBar from "../../components/dashboard/topbar/TopBar";
 import TotalsConsumption from "../../components/dashboard/charts/TotalsConsumption";
 import CategoryConsumption from "../../components/dashboard/charts/CategoryConsumption";
@@ -20,7 +21,7 @@ export default async function Home() {
         <TopBar />
       </div>
       <div className="flex gap-3">
-        <div className="basis-1/2 flex flex-col gap-3 rounded-xl p-6 h-64 bg-blue-900">
+        <div className="basis-1/2 flex flex-col gap-3 rounded-xl p-6 h-64 card_charts">
           <div>
             <h2 className="text-gray-400">Welcome back,</h2>
           </div>
@@ -32,18 +33,18 @@ export default async function Home() {
           </div>
         </div>
         <div className="basis-1/2 grow">
-          <TotalsConsumption />
+          <AvgLastMonthConsumption data={data[0].charts} />
         </div>
         <div className="basis-1/2">
-          <CategoryConsumption />
+          <HoursConsumption data={data[0].charts} />
         </div>
       </div>
-      <div className="flex">
+      <div className="flex gap-3">
         <div className="basis-1/2">
-          <AvgLastMonthConsumption />
+          <TotalsConsumption data={data[0].charts} />
         </div>
         <div className="basis-1/2">
-          <HoursConsumption />
+          <CategoryConsumption data={data[0].charts} />
         </div>
       </div>
     </main>

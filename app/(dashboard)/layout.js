@@ -14,10 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} overflow-hidden`}>
         <main className="flex">
           <Sidebar />
-          <div className="grow basis-full">{children}</div>
+          <div className="grow basis-full overflow-y-scroll h-screen">
+            {children}
+          </div>
         </main>
       </body>
     </html>

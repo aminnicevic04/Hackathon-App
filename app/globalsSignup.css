@@ -12,6 +12,16 @@ body {
   );
 }
 
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #004ee7;
+}
+
 .section_title {
   @apply text-4xl font-bold;
 }
@@ -22,4 +32,16 @@ body {
 
 .section_subtitle {
   @apply uppercase text-xs font-bold;
+}
+
+.card_charts {
+  padding: 30px;
+  border-radius: 30px;
+  background: rgb(6, 32, 151);
+  background: linear-gradient(
+    to top right,
+    rgba(6, 32, 151, 1) 0%,
+    rgba(28, 20, 86, 1) 35%,
+    rgba(17, 14, 38, 1) 78%
+  );
 }

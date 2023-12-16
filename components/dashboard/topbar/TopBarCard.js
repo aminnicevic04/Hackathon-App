@@ -3,8 +3,8 @@ import Card from "../../../components/shared/ui/Card";
 const TopBarCard = ({ title, data, icon }) => {
   return (
     <Card>
-      <div className="flex justify-between gap-3 items-center w-[340px]">
-        <div className="flex flex-col gap-[6px]">
+      <div className="flex justify-between items-center">
+        <div className="flex flex-col">
           <div>
             <p className="text-xs text-gray-400 whitespace-nowrap">{title}</p>
           </div>

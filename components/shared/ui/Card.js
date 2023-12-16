@@ -2,7 +2,7 @@
 
 const Card = ({ children }) => {
   return (
-    <div className="bg-[#0a0d28] p-4 w-fit h-fit shadow-md rounded-xl overflow-hidden">
+    <div className=" card_charts p-4 w-full h-fit shadow-md rounded-xl overflow-hidden">
       {children}
     </div>
   );
